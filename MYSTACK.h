@@ -5,8 +5,8 @@ class Node
 {
 public:
     int val;
-    Node* next;
-    Node* prev;
+    Node *next;
+    Node *prev;
 
     Node(int val)
     {
@@ -18,8 +18,8 @@ public:
 
 class Stack
 {
-    Node* head;
-    Node* top;
+    Node *head;
+    Node *top;
     int count = 0;
 
 public:
@@ -28,12 +28,12 @@ public:
         head = NULL;
         top = NULL;
     }
-    //PUSH
+    // PUSH
     void push(int val)
     {
-        Node* newNode = new Node(val);
+        Node *newNode = new Node(val);
 
-        if(head == NULL)
+        if (head == NULL)
         {
             head = top = newNode;
             count++;
@@ -45,17 +45,17 @@ public:
         top = newNode;
         count++;
     }
-    //POP
+    // POP
     int pop()
     {
-        Node* delNode;
+        Node *delNode;
         delNode = top;
         int chk = -1;
 
-        if(head == NULL) // There is no element in the Stack
+        if (head == NULL) // There is no element in the Stack
             cout << "Stack Underflow" << endl;
 
-        if(top == head) // There is only 1 element
+        if (top == head) // There is only 1 element
             head = top = NULL;
         else // There is More than 1 element
         {
@@ -68,27 +68,26 @@ public:
         count--;
         return chk;
     }
-    //EMPTY
+    // EMPTY
     bool empty()
     {
-        if(head == NULL)
+        if (head == NULL)
             return true;
         return false;
     }
-    //SIZE
+    // SIZE
     int size()
     {
         return count;
     }
-    //TOP
+    // TOP
     int Top()
     {
         int chk = -1;
-        if(top == NULL)
+        if (top == NULL)
             cout << "Stack Underflow | There is no Element in Top " << endl;
         else
             chk = top->val;
         return chk;
     }
 };
-
