@@ -23,7 +23,7 @@ class Stack
     int count = 0;
 
 public:
-    stack()
+    Stack()
     {
         head = NULL;
         top = NULL;
