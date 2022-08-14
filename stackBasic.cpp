@@ -23,6 +23,11 @@ class Stack
     int count = 0;
 
 public:
+    stack()
+    {
+        head = NULL;
+        top = NULL;
+    }
     //PUSH
     void push(int val)
     {
@@ -87,7 +92,3 @@ public:
     }
 };
 
-int main(void)
-{
-
-}
