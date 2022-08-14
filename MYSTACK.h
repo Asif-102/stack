@@ -83,7 +83,7 @@ public:
     //TOP
     int Top()
     {
-        int chk = -1
+        int chk = -1;
         if(top == NULL)
             cout << "Stack Underflow | There is no Element in Top " << endl;
         else
