@@ -81,7 +81,7 @@ public:
         return count;
     }
     //TOP
-    int top()
+    int Top()
     {
         int chk = -1
         if(top == NULL)
