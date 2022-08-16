@@ -1,14 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+template <typename N>
 class Node
 {
 public:
-    int val;
+    N val;
     Node *next;
     Node *prev;
 
-    Node(int val)
+    Node(N val)
     {
         this->val = val;
         prev = NULL;
@@ -16,10 +17,11 @@ public:
     }
 };
 
+template <typename S>
 class Stack
 {
-    Node *head;
-    Node *top;
+    Node<S> *head;
+    Node<S> *top;
     int count = 0;
 
 public:
@@ -31,7 +33,7 @@ public:
     // PUSH
     void push(int val)
     {
-        Node *newNode = new Node(val);
+        Node<S> *newNode = new Node<S>(val);
 
         if (head == NULL)
         {
@@ -46,14 +48,17 @@ public:
         count++;
     }
     // POP
-    int pop()
+    S pop()
     {
-        Node *delNode;
+        Node<S> *delNode;
         delNode = top;
-        int chk = -1;
+        S chk;
 
         if (head == NULL) // There is no element in the Stack
+        {
             cout << "Stack Underflow" << endl;
+            return chk;
+        }
 
         if (top == head) // There is only 1 element
             head = top = NULL;
@@ -81,9 +86,9 @@ public:
         return count;
     }
     // TOP
-    int Top()
+    S Top()
     {
-        int chk = -1;
+        S chk;
         if (top == NULL)
             cout << "Stack Underflow | There is no Element in Top " << endl;
         else

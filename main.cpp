@@ -8,7 +8,7 @@ string, pair, structure, objects of class
 */
 int main(void)
 {
-    Stack st;
+    Stack<int> st;
 
     st.push(1);
     st.push(2);
@@ -16,8 +16,8 @@ int main(void)
 
     while (!st.empty())
         cout << st.pop() << endl;
-    
+
     cout << st.size() << endl;
-    if(!st.empty())
+    if (!st.empty())
         cout << st.Top() << endl; // st.Top() != -1
 }
