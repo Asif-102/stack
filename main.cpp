@@ -4,7 +4,7 @@
 using namespace std;
 /*
 stack of float, double, char
-string, array, structure, objects of class
+string, pair, structure, objects of class
 */
 int main(void)
 {
