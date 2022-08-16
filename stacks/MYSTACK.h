@@ -31,7 +31,7 @@ public:
         top = NULL;
     }
     // PUSH
-    void push(int val)
+    void push(S val)
     {
         Node<S> *newNode = new Node<S>(val);
 

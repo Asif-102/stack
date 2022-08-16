@@ -8,16 +8,38 @@ string, pair, structure, objects of class
 */
 int main(void)
 {
-    Stack<float> st;
+    // Stack<string> st;
 
-    st.push(1.6);
-    st.push(2.7);
-    st.push(3.99);
+    // st.push("akib");
+    // st.push("ratan");
+    // st.push("zohir");
+
+    // while (!st.empty())
+    //     cout << st.pop() << endl;
+
+    // cout << st.size() << endl;
+    // if (!st.empty())
+    //     cout << st.Top() << endl; // st.Top() != -1
+
+    Stack<pair <int, char>> st;
+    st.push(make_pair(1, 'a'));
+    st.push(make_pair(2, 'b'));
+    st.push(make_pair(3, 'c'));
 
     while (!st.empty())
-        cout << st.pop() << endl;
+    {
+        pair<int, char> chk;
+        chk = st.pop();
+        cout << chk.first << "|" << chk.second << endl;
+    }
 
     cout << st.size() << endl;
-    if (!st.empty())
-        cout << st.Top() << endl; // st.Top() != -1
+
+    if(!st.empty())
+    {
+        pair<int, char> chk;
+        chk = st.Top();
+        cout << chk.first << "|" << chk.second << endl;
+    }
+    
 }
