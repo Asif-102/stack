@@ -8,11 +8,11 @@ string, pair, structure, objects of class
 */
 int main(void)
 {
-    Stack<int> st;
+    Stack<float> st;
 
-    st.push(1);
-    st.push(2);
-    st.push(3);
+    st.push(1.6);
+    st.push(2.7);
+    st.push(3.99);
 
     while (!st.empty())
         cout << st.pop() << endl;
