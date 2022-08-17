@@ -61,7 +61,6 @@ public:
     {
         cout << name << " | " << id << " | " << salary << endl;
     }
-
 };
 
 int main(void)
@@ -101,12 +100,12 @@ int main(void)
     // }
 
     Stack<person> st;
-    person a("abdur rahim", 654.6);    
-    person b("ria akter", 566.8);    
+    person a("abdur rahim", 654.6);
+    person b("ria akter", 566.8);
     person c("farid ahmed", 631.3);
 
-    st.push(a);    
-    st.push(b);    
+    st.push(a);
+    st.push(b);
     st.push(c);
 
     // while(!st.empty())
@@ -118,5 +117,5 @@ int main(void)
 
     person personObj;
     personObj = st.Top();
-    personObj.print();    
+    personObj.print();
 }
