@@ -95,4 +95,25 @@ public:
             chk = top->val;
         return chk;
     }
+    // MID
+    S mid()
+    {
+        S chk;
+        if(head == NULL)
+        {
+            return chk;
+        }
+        int mid = count / 2 + 1;
+        int c = 1;
+
+        Node<S> *tmp = head;
+
+        while(c != mid)
+            {
+                tmp = tmp->next;
+                c++;
+            }
+        
+        return tmp->val;
+    }
 };
